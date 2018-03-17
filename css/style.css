@@ -1,0 +1,23 @@
+html {
+  /* background-color: #8fc5c0; */
+  background: url(../images/sand.jpg);
+  background-size: cover;
+  /* background-position: center center; */
+  /* background-repeat: no-repeat; */
+}
+
+body {
+  font-family: sans-serif;
+  /* text-align:center; */
+  margin:auto;
+  padding-left: 20px;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+}
+
+.reverseCat {
+  transform: scaleX(-1);
+}
