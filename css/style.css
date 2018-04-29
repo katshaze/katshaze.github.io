@@ -1,5 +1,5 @@
 html {
-  background-color: #a9d2c5;
+  /* background-color: #a9d2c5; */
   /* background: url(../images/sand.jpg); */
   /* background-size: cover; */
   /* background-position: center center; */
@@ -8,14 +8,51 @@ html {
 
 body {
   font-family: sans-serif;
-  /* text-align:center; */
-  margin:auto;
-  padding-left: 20px;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  /* height: 100vh; */
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  color: rgba(40, 40, 40, 1)
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.intro {
+  z-index: 2;
+  opacity: 1;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  color: rgba(45, 45, 45, 1)
+}
+
+p.hello {
+  font-size: 30px;
 }
 
 p {
-  color: white;
   font-size: 20px;
+}
+
+#cat {
+  z-index: 1;
+  bottom: 100px;
+  position: absolute;
 }
 
 .reverseCat {
