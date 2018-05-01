@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Katrina Hayes</title>
   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-  <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script src="js/underscore.js"></script>
-  <script src="js/canvas.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="jquery.js"></script>
+  <script src="animations.js"></script>
+  <script src="canvas.js"></script>
   <!-- <script src="js/navCanvas.js"></script> -->
  </head>
  <body>
@@ -17,27 +17,69 @@
     <header>
       <nav>
         <ul>
-          <a href="#">home</a>
-          <a href="#">projects</a>
-          <a href="#">about</a>
+          <a id="home-nav" href="#">home</a>
+          <a id="about-nav" href="#">about</a>
+          <a id="projects-nav" href="#">projects</a>
         </ul>
-        <canvas id="navCanvas"></canvas>
       </nav>
       <div class="spacer"></div>
       <div class="intro">
         <div class="text-holder">
-          <h1 class="hello">Hi! I'm Katrina, an (almost) freshly-minted web developer based in Sydney.</h1>
-          <h2>Check out my recent projects below.</h2>
+          <h1 class="hello">Katrina Hayes</h1>
+          <h1>Web developer. Language learner.</h1>
           <!-- TODO: add contact icons and links -->
+          <h2>Projects below >></h2>
         </div>
       </div>
 
     </header>
     <div class="main">
-
+      <div class="about">
+        <h1 id="about-heading">About</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore error quaerat praesentium. Sapiente eos distinctio fugiat, nobis qui veritatis vel incidunt harum earum, debitis excepturi beatae maiores, natus recusandae voluptates.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nesciunt voluptate ullam, laudantium voluptatibus rem ab recusandae expedita minus ex provident mollitia veritatis odit natus reiciendis distinctio aut fugiat quis.</p>
+      </div>
+      <div class="projects">
+        <h1 id="projects-heading">Projects</h1>
+        <div class="project co-canvas">
+          <a href="#">
+            <figure class="square">
+              <img src="../images/cocanvas.png" alt="CoCanvas">
+              <figcaption>CoCanvas</figcaption>
+            </figure>
+          </a>
+          <div class="description">
+            <h3>CoCanvas: Collaborative pixel art</h3>
+            <p>My first website created as part of a group, CoCanvas allows you to draw pixel art on a neverending canvas with friends and strangers on the internet. Pixels are updated live so you can watch as art is created. The app uses a rails server on the backend, and on the frontend is a basic Nodejs app using expressJS to create a server that is deployed to Heroku. Try it out, and send me a shot of your pixel artwork!</p>
+          </div>
+        </div>
+        <div class="project bookpinch">
+          <figure class="circle">
+            <img src="../images/bookpinch.png" alt="BookPinch">
+            <figcaption>BookPinch</figcaption>
+          </figure>
+          <div class="description">
+            <h3>BookPinch: Track books. Find readers with similar book loves. Pinch their books.</h3>
+            <p>BookPinch is the first website I created using Ruby on Rails. It allows users to search books via the Goodreads API, add books to a bookshelf as reading, to read and read, and find other users who love the same books you do, then search their favourites shelf for your next book to pinch.</p>
+          </div>
+        </div>
+        <div class="project noughts-crosses">
+          <figure class="square">
+            <img src="#" alt="Noughts&Crosses">
+            <figcaption>Noughts & Crosses</figcaption>
+          </figure>
+          <div class="description">
+            <h3>Noughts & Crosses: Xs vs. Blowfish</h3>
+            <p>This Noughts & Crosses game was my first major project. It allows two player games as well as against the (not very smart at this stage) computer. Seemingly simple, coding this was my first proper foray into the mind-stretching world of writing code and following it as it plays out, only to re-write and re-follow it until finally it (more or less) acts how you're hoping. I won't soon forget that sweet feeling.</p>
+          </div>
+        </div>
+      </div>
     </div>
     <footer>
-
+      <div class="final">
+        <p>Return to top</p>
+        <p>Or for some extra fun, try clicking anywhere on screen to see the generative art background change pattern.</p>
+      </div>
     </footer>
     <canvas id="myCanvas"></canvas>
   </div>

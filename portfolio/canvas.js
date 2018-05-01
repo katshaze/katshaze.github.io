@@ -58,8 +58,8 @@ $(document).ready(function() {
 
         ctx.beginPath();
         ctx.strokeStyle = `rgb(
-                      ${Math.floor(255 - (y * 4))}, 70,
-                      ${Math.floor(255 - (x * 20))})`;
+                      ${Math.floor(255 - ((x + 1) * 5))}, ${Math.floor(100 - (x + 5))},
+                      ${Math.floor(255 - ((y + 1) * 5))})`;
         if (leftToRight) {
           // draw  left to right line = \
           ctx.moveTo(xOffset, yOffset);
@@ -104,7 +104,7 @@ $(document).ready(function() {
   generateOverlapDiagonals(context, tileSize, canvas.width, canvas.height);
 
   // do it againnnnnn at random
-  canvas.addEventListener("click", function(){
+  document.addEventListener("click", function(){
     const diagonals = Math.random() <= .5;
     if (diagonals) {
       generateOverlapDiagonals(context, tileSize, canvas.width, canvas.height);

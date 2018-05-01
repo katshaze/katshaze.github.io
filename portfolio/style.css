@@ -1,4 +1,8 @@
 /* MAJOR ELEMENTS */
+* {
+  box-sizing: border-box;
+}
+
 html {
   /* background-color: #a9d2c5; */
   /* background: url(../images/sand.jpg); */
@@ -34,7 +38,9 @@ header {
 }
 
 .main {
-  height: 800px;
+  /* height: 800px; */
+  width: 80%;
+  margin: 30px auto 0 auto;
 }
 
 footer {
@@ -46,6 +52,7 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -5;
 }
 
 /* DELETE IF I DON'T USE IN THE END */
@@ -66,20 +73,26 @@ nav {
   align-items: flex-start;
   /* justify-content: flex-end; */
   position: fixed;
-  background-color: rgba(110,110,130,1);
-  color: rgba(255,255,252,1);
-  margin-top: 10px;
+  /* background-color: rgba(255,255,252,1); */
+  /* color: rgba(110,110,130,1); */
+  color: inherit;
+  /* margin-top: 10px; */
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.2); */
+}
+
+nav ul {
+  padding: 0;
+  padding-left: 10px;
+  margin: 0;
 }
 
 nav a {
   display: inline-block;
-  padding: 2px 0;
-  margin: 0 20px;
+  padding: 10px 0;
+  margin: 0 10px;
   font-size: 30px;
   text-decoration: none;
   color: inherit;
-  padding-bottom: 10px;
-
 }
 
 nav a:hover {
@@ -103,15 +116,104 @@ nav a:hover {
   opacity: 1;
   width: 100%;
   height: auto;
-  text-align: center;
+  text-align: left;
   color: rgba(45, 45, 45, 1);
   /* background-color: rgba(255,255,252,.8); */
 }
 
-p.hello {
-  font-size: 30px;
+h1.hello {
+  font-size: 64px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-p {
-  font-size: 20px;
+h1 {
+  font-size: 48px;
+  margin-top: 0;
 }
+
+.intro h2 {
+  margin-bottom: 30px;
+}
+
+/* ABOUT */
+.about {
+  height: 100vh;
+}
+
+/* PROJECTS */
+.projects {
+  max-width: 100%:
+  margin: 0 auto;
+}
+
+.projects h1 {
+  text-align: left;
+}
+
+.project  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 0 0;
+}
+
+figure {
+  width: 300px;
+  height: 300px;
+  border: 7px solid rgba(20, 20, 20, 1);
+  position: relative;
+}
+
+figcaption {
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* makes it disappear on normal state*/
+  opacity: 0;
+  /* smooths hover */
+  transition: all .25s ease-in-out;
+  /* styling figcaption */
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  /* padding-top: 100px; */
+  /* adjust for height */
+  line-height: 295px;
+}
+
+figcaption:hover {
+  /* turns the caption back on */
+  opacity: .6;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.circle img {
+  border-radius: 50%;
+}
+
+.project div {
+  width: 300px;
+  height: 300px;
+}
+
+figure img {
+  width: 100%;
+}
+
+.description h3 {
+  margin-top: 0;
+}
+
+.description p {
+
+}
+
+/* RESPONSIVENESS */
