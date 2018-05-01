@@ -1,9 +1,4 @@
 $(document).ready(function() {
-  // show description
-  $('.project').on('click', function() {
-    $(this).toggleClass('show-description');
-  });
-
   // scroll to sections
   $('#home-nav').on('click', function(e) {
     e.preventDefault();
