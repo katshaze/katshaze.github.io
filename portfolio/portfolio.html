@@ -7,6 +7,7 @@
   <title>Katrina Hayes</title>
   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <script type="text/javascript" src="jquery.js"></script>
   <script src="animations.js"></script>
   <script src="canvas.js"></script>
@@ -16,18 +17,21 @@
   <div class="container">
     <header>
       <nav>
-        <ul>
-          <a id="home-nav" href="#">home</a>
-          <a id="about-nav" href="#">about</a>
-          <a id="projects-nav" href="#">projects</a>
-        </ul>
+        <a id="home-nav" href="#">home</a>
+        <a id="about-nav" href="#">about</a>
+        <a id="projects-nav" href="#">projects</a>
       </nav>
       <div class="spacer"></div>
       <div class="intro">
         <div class="text-holder">
           <h1 class="hello">Katrina Hayes</h1>
           <h1>Web developer. Language learner.</h1>
-          <!-- TODO: add contact icons and links -->
+          <div class='contact-icons'>
+            <a class="fab fa-github" href="https://www.github.com/katshaze" target="_blank"></a>
+            <a class="fab fa-linkedin" href="https://www.linkedin.com/in/katrina-hayes/" target="_blank"></a>
+            <a class="fab fa-twitter-square" href="https://twitter.com/katshaze" target="_blank"></a>
+            <a class="fas fa-file-alt" href="../assets/KatrinaHayes_Resume_2018.pdf" target="_blank"></a>
+          </div>
         </div>
       </div>
 
@@ -36,10 +40,9 @@
       <div class="about">
         <h1 id="about-heading">About</h1>
         <div class="about-info">
-          <p class="one">Hi! I'm Katrina, an (almost) freshly-minted web developer, about to emerge from the mind-bending fog of General Assembly's Web Development Immersive course.
-          <p>I'm transitioning from a background in linguistics, policy & project management. I've always loved learning languages – Spanish, French, Arabic, and most recently Japanese - and learning computer languages has been just as enjoyable.</p>
-          <p>Learning to code has streched (read: battered!) my brain, and I'm excited to find myself in a new world of endless learning.</p>
-          <p>When I'm not coding, you'll find me drinking coffee (am) or wine (pm), deciding on my next book to read, or being fascinated watching my one-year-old learn a new word.</p>
+          <p class="one">I'm an (almost) freshly-minted web developer, about to emerge from the mind-bending fog of an immersive web development course.</p>
+          <p>Transitioning from a background in linguistics & project management, learning languages – Spanish, French, Arabic, and most recently Japanese - has long been my thing, and learning computer languages has been just as enjoyable.</p>
+          <p>Coding has opened my brain to new ways of thinking, and I'm excited to find myself in a new world of endless learning. When I'm not coding, you'll find me planning trips, reading books, or being fascinated as my one-year-old learns a new word.</p>
         </div>
         <div class="skills">
           <div class="skills-head">
@@ -57,6 +60,15 @@
             <div>Git</div>
           </div>
         </div>
+        <div class="learning">
+          <div class="learning-head">
+            <h3>Learning</h3>
+          </div>
+          <div class="learning-body">
+            <div>Node.js</div>
+            <div>Python</div>
+          </div>
+        </div>
       </div>
 
       <div class="projects">
@@ -66,44 +78,46 @@
             <figure class="circle">
               <img src="../images/cocanvas.png" alt="CoCanvas">
               <figcaption>CoCanvas</figcaption>
-              <figcaption>View the site/make art</figcaption>
+              <figcaption><a href="https://co-canvas.herokuapp.com" target="_blank">View the site/make art</a></figcaption>
             </figure>
           </a>
           <div class="description">
-            <h3>CoCanvas: Collaborative Pixel Art</h3>
-            <p>My first website created as part of a group, CoCanvas allows you to draw pixel art on a neverending canvas with friends and strangers on the internet. Pixels are updated live so you can watch as art is created. The app uses a rails server on the backend, and on the frontend is a basic Nodejs app using expressJS to create a server that is deployed to Heroku. Try it out, and send me a shot of your pixel artwork!</p>
+            <h3>CoCanvas</h3>
+            <p>CoCanvas is a collaborative pixel art app that allows you to draw pixel art on a neverending canvas with friends and strangers on the internet.</p>
+            <p>My first major group project, the app has a Rails backend and uses Action Cable and WebSockets to update the pixels live as users add them to the canvas. It also features a live chat component created in React.</p>
           </div>
-          <button class="code">Show me the code!</button>
+          <button class="code"><a href="https://github.com/cocanvas" target="_blank">Show me the code!</a></button>
         </div>
         <div class="project bookpinch">
           <figure class="circle">
             <img src="../images/bookpinch.png" alt="BookPinch">
             <figcaption>BookPinch</figcaption>
-            <figcaption>View site/pinch books</figcaption>
+            <figcaption><a href="https://bookpinch.herokuapp.com">View site/pinch books</a></figcaption>
           </figure>
           <div class="description">
-            <h3>BookPinch: Track books. Find readers with similar book loves. Pinch their books.</h3>
-            <p>BookPinch is the first website I created using Ruby on Rails. It allows users to search books via the Goodreads API, add books to a bookshelf as reading, to read and read, and find other users who love the same books you do, then search their favourites shelf for your next book to pinch.</p>
+            <h3>BookPinch</h3>
+            <p>BookPinch is built with Ruby on Rails. It allows users to search for books via the Goodreads API, track those books as 'to read', 'reading' and 'read', then find other users who love the same books you do, and explore their favourites shelf for your next book to pinch.</p>
           </div>
-          <button class="code">Show me the code!</button>
+          <button class="code"><a href="https://github.com/katshaze/project1" target="_blank">Show me the code!</a></button>
         </div>
         <div class="project noughts-crosses">
           <figure class="circle">
             <img src="../images/noughts&crosses.png" alt="Noughts&Crosses">
-            <figcaption>Play a game</figcaption>
+            <figcaption><a href="https://github.com/katshaze/project0" target="_blank">Play a game</a></figcaption>
           </figure>
           <div class="description">
-            <h3>Noughts & Crosses: Xs vs. Blowfish</h3>
-            <p>This Noughts & Crosses game was my first major project. It allows two player games as well as against the (not very smart at this stage) computer. Seemingly simple, coding this was my first proper foray into the mind-stretching world of writing code and following it as it plays out, only to re-write and re-follow it until finally it (more or less) acts how you're hoping. I won't soon forget that sweet feeling.</p>
+            <h3>Noughts & Crosses</h3>
+            <p>My first major project, this website allows you to play Noughts & Crosses against another human or the (not very smart at this stage) computer. It is built using JavaScript (including jQuery), HTML and CSS.</p>
+            <p>It sounded simple, but coding this was my first proper foray into the mind-stretching world of game logic and following my code around and around as it played out, only to re-write and re-follow it until finally it (more or less) acted how I was hoping. I won't soon forget that sweet feeling.</p>
           </div>
-          <button class="code">Show me the code!</button>
+          <button class="code"><a href="https://github.com/katshaze/project0" target="_blank">Show me the code!</button>
         </div>
       </div>
     </div>
     <footer>
       <div class="final">
-        <p>Return to top</p>
-        <p>Or for some extra fun, try clicking anywhere on screen to see the generative art background change pattern.</p>
+        <p>&#128033; &#128033; &#128033;</p>
+        <a id="foot-nav" href='#'>Return to top</a>
       </div>
     </footer>
     <canvas id="myCanvas"></canvas>
