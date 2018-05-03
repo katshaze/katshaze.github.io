@@ -15,14 +15,14 @@ $(document).ready(function() {
   $('#about-nav').on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#about-heading").offset().top - 60
+        scrollTop: $("#about-heading").offset().top - 70
     }, 1000);
   });
 
   $('#projects-nav').on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#projects-heading").offset().top - 60
+        scrollTop: $("#projects-heading").offset().top - 70
     }, 1000);
   });
 });
