@@ -4,31 +4,27 @@
 } */
 
 html {
-  /* background-color: #a9d2c5; */
-  /* background: url(../images/sand.jpg); */
-  /* background-size: cover; */
-  /* background-position: center center; */
-  /* background-repeat: no-repeat; */
+
 }
 
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  /* height: 100vh; */
 }
 
 .container {
   /* width: 100%; */
   margin: 0;
   padding: 0;
-  /* height: 100vh; */
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   color: rgba(40, 40, 40, 1);
 }
 
 header {
   min-height: 100vh;
+  width: 85%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,7 +72,7 @@ nav {
   height: 10%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   color: inherit;
   z-index: 99;
@@ -103,7 +99,6 @@ nav a:hover {
 
 /* WELCOME PAGE TEXT */
 .text-holder {
-  width: 85%;
   margin: 0 auto;
 }
 
@@ -114,7 +109,6 @@ nav a:hover {
   height: auto;
   text-align: left;
   color: rgba(45, 45, 45, 1);
-  /* background-color: rgba(255,255,252,.8); */
 }
 
 h1.hello {
@@ -208,7 +202,6 @@ p.one {
 
 /* PROJECTS */
 .projects {
-  max-width: 100%;
   margin: 64px auto 0 auto;
 }
 
@@ -225,11 +218,13 @@ p.one {
 }
 
 figure {
-  width: 300px;
-  height: 300px;
+  width: 290px;
+  height: 290px;
   border: 6px solid rgba(40, 40, 40, 1);
   position: relative;
   box-shadow: 0 0 25px rgba(0,0,0,0.8);
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 figure img {
@@ -259,10 +254,6 @@ figcaption {
   line-height: 270px;
 }
 
-figcaption.small {
-  font-size: 18px;
-}
-
 figcaption:hover {
   /* turns the caption back on */
   opacity: .6;
@@ -272,11 +263,13 @@ figcaption:hover {
   border-radius: 50%;
 }
 
-.project div {
-  width: 320px;
-  /* height: 300px; */
+.desc-text {
   background-color: rgba(255,255,252,.8);
   padding: 15px;
+}
+
+.description {
+  width: 310px;
 }
 
 .description h3 {
@@ -288,8 +281,13 @@ figcaption:hover {
   margin-bottom: 0;
 }
 
-button.code {
+.desc-button {
   margin: 10px auto;
+}
+
+button.code {
+  display: block;
+  margin: 0 auto;
   padding: 5px;
   border-radius: 5px;
   background-color: #f2e1e1;
@@ -315,3 +313,47 @@ footer a {
 }
 
 /* RESPONSIVENESS */
+
+@media (min-width: 550px) {
+  .description {
+    width: 400px;
+  }
+}
+@media (min-width: 650px) {
+  nav {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 800px) {
+  header {
+    width: 80%;
+  }
+  nav {
+    width: 80%;
+  }
+  .main {
+    width: 80%;
+  }
+  .project {
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    align-items: flex-start;
+  }
+  .description {
+    width: 300px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 915px) {
+  .description {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project {
+    
+  }
+}
