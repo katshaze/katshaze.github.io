@@ -1,71 +1,359 @@
+/* MAJOR ELEMENTS */
+/* * {
+  box-sizing: border-box;
+} */
+
 html {
-  /* background-color: #a9d2c5; */
-  /* background: url(../images/sand.jpg); */
-  /* background-size: cover; */
-  /* background-position: center center; */
-  /* background-repeat: no-repeat; */
+
 }
 
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
 }
 
 .container {
-  width: 100%;
+  /* width: 100%; */
+  margin: 0;
+  padding: 0;
+  /* font-family: sans-serif; */
+  color: rgba(40, 40, 40, 1);
+}
+
+header {
+  min-height: 100vh;
+  width: 85%;
   margin: 0 auto;
-  /* height: 100vh; */
-  font-family: sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
-  color: rgba(40, 40, 40, 1)
+  /* justify-content: center; */
 }
 
-canvas {
+.main {
+  width: 85%;
+  margin: 30px auto 0 auto;
+}
+
+footer {
+  width: 85%;
+  margin: 0 auto 20px auto;
+  font-size: 32px;
+}
+
+a {
+  padding: 5px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:hover {
+  color: rgba(120, 100, 100, 1);
+}
+
+p {
+  font-size: 18px;
+}
+
+/* CANVAS STYLING */
+#myCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+/* NAV */
+nav {
+  width: 85%;
+  margin: 0 auto;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  color: inherit;
+  z-index: 99;
+}
+
+nav a {
+  margin: 0 5px;
+  font-size: 28px;
+}
+
+nav #home-nav {
+  margin-left: 0 !important;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* SPACER */
+.spacer {
+  height: 25vh;
+  width: 100%;
+}
+
+/* WELCOME PAGE TEXT */
+.text-holder {
+  margin: 0 auto;
+}
+
+.intro {
+  z-index: 1;
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  color: rgba(45, 45, 45, 1);
+}
+
+h1.hello {
+  font-size: 60px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 44px;
+  margin-top: 0;
+}
+
+.intro h2 {
+  margin-bottom: 30px;
+}
+
+.contact-icons {
+  text-align: left;
+  margin-top: 5%;
+}
+
+.contact-icons a {
+  padding: 0;
+  margin-right: 10px;
+  font-size: 48px;
+  background-color: white;
+  color: rgba(40, 40, 40, 1);
+}
+
+.contact-icons a:hover {
+  color: rgba(120, 100, 100, 1);
+}
+
+/* ABOUT */
+.about {
+  min-height: 100vh;
+  margin-top: 64px;
+}
+
+.about h1 {
+  margin-bottom: 10px;
+}
+
+.about p {
+  margin-bottom: 0
+}
+
+p.one {
+  margin-top: 0 !important;
+}
+
+.about-info {
+  margin-bottom: 20px;
+}
+
+.about-info p {
+  background-color: rgba(255,255,252,.8);
+  padding: 5px;
+}
+
+.skills, .learning {
+  font-family: monospace;
+  margin-bottom: 10px;
+}
+
+.skills-head, .learning-head {
+  position: relative;
+}
+.skills-head h3, .learning-head h3 {
+  /* position: fixed; */
+  /* text-transform: uppercase;
+  font-size: 20px; */
+  /* transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg); */
+  margin: 0;
+}
+
+.skills-body div, .learning-body div {
+  display: inline-block;
+  border: 1px solid black;
+  background-color: rgba(255,255,252,.8);
+  padding: 5px;
+  margin: 5px 5px 5px 0;
+}
+
+.skills-body div:hover, .learning-body div:hover {
+  background-color: rgb(121, 139, 234);
+}
+
+/* PROJECTS */
+.projects {
+  margin: 64px auto 0 auto;
+}
+
+.projects h1 {
+  text-align: left;
+}
+
+.project  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 0 0;
+}
+
+figure {
+  width: 290px;
+  height: 290px;
+  border: 6px solid rgba(40, 40, 40, 1);
+  position: relative;
+  box-shadow: 0 0 25px rgba(0,0,0,0.8);
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+figure img {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.spacer {
-  height: 150px;
-  width: 100%;
-}
-
-.text-holder {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.intro {
-  z-index: 2;
-  opacity: 1;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  color: rgba(45, 45, 45, 1);
-  background-color: rgba(255,255,252,.8);
-}
-
-p.hello {
-  font-size: 30px;
-}
-
-p {
-  font-size: 20px;
-}
-
-#cat {
-  z-index: 1;
-  bottom: 100px;
+figcaption {
+  font-size: 25px;
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* makes it disappear on normal state*/
+  opacity: 0;
+  /* smooths hover */
+  transition: all .25s ease-in-out;
+  /* styling figcaption */
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  /* padding-top: 90px; */
+  /* adjust for height */
+  line-height: 270px;
 }
 
-.reverseCat {
-  transform: scaleX(-1);
+figcaption:hover {
+  /* turns the caption back on */
+  opacity: .6;
+}
+
+.circle, .circle img, .circle figcaption {
+  border-radius: 50%;
+}
+
+.desc-text {
+  background-color: rgba(255,255,252,.8);
+  padding: 15px;
+}
+
+.description {
+  width: 310px;
+}
+
+.description h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.description p {
+  margin-bottom: 0;
+}
+
+.desc-button {
+  margin: 10px auto;
+}
+
+button.code {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f2e1e1;
+  border: 1px solid rgba(30, 30, 30, 1);
+  font-size: 14px;
+  font-family: monospace;
+  box-shadow: 0,0,10px, rgba(0,0,0,0.5);
+}
+
+/* FOOTER */
+div.final {
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer a {
+  margin: 0 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* RESPONSIVENESS */
+
+@media (min-width: 550px) {
+  .description {
+    width: 400px;
+  }
+}
+@media (min-width: 650px) {
+  nav {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 800px) {
+  header {
+    width: 80%;
+  }
+  nav {
+    width: 80%;
+  }
+  .main {
+    width: 80%;
+  }
+  .project {
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    align-items: flex-start;
+  }
+  .description {
+    width: 300px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 915px) {
+  .description {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project {
+    
+  }
 }
