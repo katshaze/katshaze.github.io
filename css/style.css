@@ -55,10 +55,6 @@ a:hover {
 
 }
 
-h1, h2, h3, nav a {
-  font-family: 'Raleway', sans-serif;
-}
-
 p {
   font-size: 17px;
 }
@@ -155,7 +151,7 @@ h1 {
 /* ABOUT */
 .about {
   min-height: 100vh;
-  margin-top: 70px;
+  margin-top: 90px;
 }
 
 .about h1 {
@@ -211,7 +207,7 @@ p.one {
 
 /* PROJECTS */
 .projects {
-  margin: 70px auto 0 auto;
+  margin: 64px auto 0 auto;
 }
 
 .projects h1 {
@@ -368,8 +364,21 @@ footer a {
   }
 }
 
+@media (min-width: 1000px) {
+  p {
+    font-size: 19px;
+  }
+  h1.hello {
+    font-size: 76px;
+  }
+  h1 {
+    font-size: 58px;
+  }
+}
+
 @media (min-width: 1200px) {
   .project {
 
   }
+
 }
