@@ -12,17 +12,31 @@ $(document).ready(function() {
     scrollTop: 0}, 1000);
   });
 
-  $('#about-nav, #scroll-down').on('click', function(e) {
+  $('#about-nav').on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#about-heading").offset().top - 64
+        scrollTop: $(".about").offset().top
+    }, 1000);
+  });
+
+  $('#intro-arrows').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $(".about").offset().top
     }, 1000);
   });
 
   $('#projects-nav').on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#projects-heading").offset().top - 64
+        scrollTop: $(".projects").offset().top
+    }, 1000);
+  });
+
+  $('#about-arrows').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $(".projects").offset().top
     }, 1000);
   });
 });

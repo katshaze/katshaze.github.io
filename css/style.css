@@ -35,7 +35,7 @@ header {
 
 .main {
   width: 85%;
-  margin: 30px auto 0 auto;
+  margin: 0 auto;
 }
 
 footer {
@@ -105,7 +105,7 @@ nav a:hover {
   z-index: 1;
   opacity: 1;
   width: 100%;
-  height: 65vh;
+  /* height: 65vh; */
   text-align: left;
   color: rgba(45, 45, 45, 1);
 }
@@ -145,15 +145,27 @@ h1 {
 }
 
 .scroll-down {
-  margin: 0 auto;
-  height: 5vh;
+  margin: 30px auto 0 auto;
   font-size: 36px;
+  text-align: center;
 }
+
 
 /* ABOUT */
 .about {
   min-height: 100vh;
   margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-spacer, .projects-spacer {
+  width: 100%;
+  height: 20vh;
+}
+
+.about-text {
+  /* height: 75vh; */
 }
 
 .about h1 {
@@ -382,10 +394,33 @@ footer a {
   .project {
 
   }
-
 }
-@media screen and (max-width: 380px), screen and (max-height: 600px) and (max-width: 540px) {
+/* @media screen and (max-width: 380px) {
   .scroll-down {
     display: none;
   }
 }
+
+@media screen and (max-height: 600px) and (max-width: 540px) {
+  .intro-arrows {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 580px) and (max-width: 580px) {
+  .about-arrows {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 560px) {
+  .about-arrows {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .about-arrows {
+    display: none;
+  }
+} */
