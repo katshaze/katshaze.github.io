@@ -51,10 +51,6 @@ a {
   cursor: pointer;
 }
 
-a:hover {
-
-}
-
 p {
   font-size: 17px;
 }
@@ -71,7 +67,7 @@ p {
 nav {
   width: 85%;
   margin: 0 auto;
-  height: 10%;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -109,7 +105,7 @@ nav a:hover {
   z-index: 1;
   opacity: 1;
   width: 100%;
-  height: auto;
+  height: 65vh;
   text-align: left;
   color: rgba(45, 45, 45, 1);
 }
@@ -144,8 +140,14 @@ h1 {
   color: rgba(40, 40, 40, 1);
 }
 
-.contact-icons a:hover {
+.contact-icons a:hover, .scroll-down a:hover {
   color: rgba(120, 100, 100, 1);
+}
+
+.scroll-down {
+  margin: 0 auto;
+  height: 5vh;
+  font-size: 36px;
 }
 
 /* ABOUT */
@@ -381,4 +383,9 @@ footer a {
 
   }
 
+}
+@media screen and (max-width: 380px), screen and (max-height: 600px) and (max-width: 540px) {
+  .scroll-down {
+    display: none;
+  }
 }

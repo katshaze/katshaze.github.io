@@ -12,7 +12,7 @@ $(document).ready(function() {
     scrollTop: 0}, 1000);
   });
 
-  $('#about-nav').on('click', function(e) {
+  $('#about-nav, #scroll-down').on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
         scrollTop: $("#about-heading").offset().top - 64
