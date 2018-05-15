@@ -1,21 +1,19 @@
-'use strict';
-
-$(document).ready(function () {
+$(document).ready(function() {
 
   // canvas
-  var windowWidth = window.innerWidth;
-  var windowHeight = window.innerHeight;
-  var container = document.querySelector('.container');
-  var scrollHeight = container.scrollHeight;
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+  const container = document.querySelector('.container');
+  const scrollHeight = container.scrollHeight;
   console.log(scrollHeight);
 
-  var canvas = document.getElementById('myCanvas');
-  var w = canvas.width = windowWidth;
-  var h = canvas.height = scrollHeight;
+  const canvas = document.getElementById('myCanvas');
+  const w = canvas.width = windowWidth;
+  const h = canvas.height = scrollHeight;
 
-  var ctx = canvas.getContext('2d');
-  var tileSize = 30;
-  var nextUp = 'b';
+  const ctx = canvas.getContext('2d');
+  const tileSize = 30;
+  let nextUp = 'b';
 
   // getting a random integer:
   // function getRandomInt(min, max) {
@@ -23,16 +21,16 @@ $(document).ready(function () {
   // }
 
   function generateDiagonals(ctx, tileSize, w, h) {
-    ctx.clearRect(0, 0, w, h);
+   ctx.clearRect(0, 0, w, h);
 
-    for (var y = 0; y <= h / tileSize; y++) {
-      for (var x = 0; x <= w / tileSize; x++) {
-        var leftToRight = Math.random() >= .5;
-        var xOffset = x * tileSize;
-        var yOffset = y * tileSize;
+    for (let y = 0; y <= (h / tileSize); y++) {
+      for (let x = 0; x <= (w / tileSize); x++) {
+        const leftToRight = Math.random() >= .5;
+        const xOffset = x * tileSize;
+        const yOffset = y * tileSize;
 
         ctx.beginPath();
-        ctx.strokeStyle = 'rgb(' + Math.floor(255 - (y + 1) * 2) + ', 0, ' + Math.floor(255 - (x + 1) * 15) + ')';
+        ctx.strokeStyle = `rgb(${Math.floor(255 - ((y + 1) * 2))}, 0, ${Math.floor(255 - ((x + 1) * 15))})`;
         if (leftToRight) {
           // draw  left to right line = \
           ctx.moveTo(xOffset, yOffset);
@@ -49,16 +47,16 @@ $(document).ready(function () {
   }
 
   function generateOverlapDiagonals(ctx, tileSize, w, h) {
-    ctx.clearRect(0, 0, w, h);
+   ctx.clearRect(0, 0, w, h);
 
-    for (var y = 0; y <= h / tileSize; y++) {
-      for (var x = 0; x <= w / tileSize; x++) {
-        var leftToRight = Math.random() >= .5;
-        var xOffset = x * tileSize;
-        var yOffset = y * tileSize;
+    for (let y = 0; y <= (h / tileSize); y++) {
+      for (let x = 0; x <= (w / tileSize); x++) {
+        const leftToRight = Math.random() >= .5;
+        const xOffset = x * tileSize;
+        const yOffset = y * tileSize;
 
         ctx.beginPath();
-        ctx.strokeStyle = 'rgb(' + Math.floor(255 - y * 4) + ', 150, ' + Math.floor(255 - x * 20) + ')';
+        ctx.strokeStyle = `rgb(${Math.floor(255 - (y * 4))}, 150, ${Math.floor(255 - (x * 20))})`;
         if (leftToRight) {
           // draw  left to right line = \
           ctx.moveTo(xOffset, yOffset);
@@ -75,16 +73,16 @@ $(document).ready(function () {
   }
 
   function generateHorVertLines(ctx, tileSize, w, h) {
-    ctx.clearRect(0, 0, w, h);
+   ctx.clearRect(0, 0, w, h);
 
-    for (var y = 0; y <= h / tileSize; y++) {
-      for (var x = 0; x <= w / tileSize; x++) {
-        var vertical = Math.random() >= .5;
-        var xOffset = x * tileSize;
-        var yOffset = y * tileSize;
+    for (let y = 0; y <= (h / tileSize); y++) {
+      for (let x = 0; x <= (w / tileSize); x++) {
+        const vertical = Math.random() >= .5;
+        const xOffset = x * tileSize;
+        const yOffset = y * tileSize;
 
         ctx.beginPath();
-        ctx.strokeStyle = 'rgb(' + Math.floor(255 - (x + 1) * 5) + ', ' + Math.floor(255 - (y + 1) * 5) + ', 0)';
+        ctx.strokeStyle = `rgb(${Math.floor(255 - ((x + 1) * 5))}, ${Math.floor(255 - ((y + 1) * 5))}, 0)`;
         if (vertical) {
           // draw vertical line = |
           ctx.moveTo(xOffset, yOffset);
@@ -101,16 +99,17 @@ $(document).ready(function () {
   }
 
   function generateHorVertLines2(ctx, tileSize, w, h) {
-    ctx.clearRect(0, 0, w, h);
+   ctx.clearRect(0, 0, w, h);
 
-    for (var y = 0; y <= h / tileSize; y++) {
-      for (var x = 0; x <= w / tileSize; x++) {
-        var vertical = Math.random() >= .5;
-        var xOffset = x * tileSize;
-        var yOffset = y * tileSize;
+    for (let y = 0; y <= (h / tileSize); y++) {
+      for (let x = 0; x <= (w / tileSize); x++) {
+        const vertical = Math.random() >= .5;
+        const xOffset = x * tileSize;
+        const yOffset = y * tileSize;
 
         ctx.beginPath();
-        ctx.strokeStyle = 'rgb(30,\n        ' + Math.floor(255 - (y + 1) * 5) + ', ' + Math.floor(255 - (x + 1) * 5) + ')';
+        ctx.strokeStyle = `rgb(30,
+        ${Math.floor(255 - ((y + 1) * 5))}, ${Math.floor(255 - ((x + 1) * 5))})`;
         if (vertical) {
           // draw vertical line = |
           ctx.moveTo(xOffset, yOffset);
@@ -126,11 +125,12 @@ $(document).ready(function () {
     }
   }
 
+
   // generate pattern initially & on refresh
   generateOverlapDiagonals(ctx, tileSize, w, h);
 
   // do it againnnnnn on each click, alternating
-  $('body, a').on('click', function () {
+  $('body, a').on('click', function(){
     if (nextUp === 'a') {
       generateOverlapDiagonals(ctx, tileSize, w, h);
       nextUp = 'b';
@@ -145,4 +145,5 @@ $(document).ready(function () {
       nextUp = 'a';
     }
   });
+
 }); // end of doc ready
