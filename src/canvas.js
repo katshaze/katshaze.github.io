@@ -5,11 +5,25 @@ $(document).ready(function() {
   const windowHeight = window.innerHeight;
   const container = document.querySelector('.container');
   const scrollHeight = container.scrollHeight;
-  console.log(scrollHeight);
 
   const canvas = document.getElementById('myCanvas');
   const w = canvas.width = windowWidth;
   const h = canvas.height = scrollHeight;
+  
+  // let w, h;
+  // const sizeCanvas = function() {
+  //   w = canvas.width = windowWidth;
+  //   h = canvas.height = scrollHeight;
+  //   console.log('sizeCanvas function triggered. width & height are:', w, h);
+  // }
+  // sizeCanvas();
+  // $(window).resize(function() {
+  //   console.log(`window resized`);
+  //   sizeCanvas()
+  // });
+
+  // const w = canvas.width = windowWidth;
+  // const h = canvas.height = scrollHeight;
 
   const ctx = canvas.getContext('2d');
   const tileSize = 30;
@@ -145,5 +159,6 @@ $(document).ready(function() {
       nextUp = 'a';
     }
   });
+
 
 }); // end of doc ready
