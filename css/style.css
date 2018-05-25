@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Open+Sans|Raleway');
+
 /* IMPORTED FONTS */
 /* font-family: 'Raleway', sans-serif;
 font-family: 'IBM Plex Sans', sans-serif;
@@ -45,7 +47,7 @@ a {
   cursor: pointer;
 }
 
-p {
+p, li {
   font-size: 19px;
 }
 
@@ -190,7 +192,6 @@ p.one {
 }
 .skills-head h3, .learning-head h3 {
   margin: 0;
-  /* font-size: 18px; */
 }
 
 .skills-body div, .learning-body div {
@@ -199,7 +200,6 @@ p.one {
   background-color: rgba(255,255,252,.9);
   padding: 5px;
   margin: 5px 5px 5px 0;
-  /* font-size: 16px; */
 }
 
 .skills-body div:hover, .learning-body div:hover {
@@ -223,7 +223,7 @@ p.one {
   margin: 120px 0 0 0;
 }
 
-.project.co-canvas {
+.project.playways {
   margin-top: 20px !important;
 }
 
@@ -245,7 +245,6 @@ figure img {
 }
 
 figcaption {
-  font-size: 22px;
   position: absolute;
   top: 0;
   left: 0;
@@ -259,17 +258,16 @@ figcaption {
   background-color: #000000;
   color: #ffffff;
   text-align: center;
-  /* adjust for height */
-  line-height: 270px;
 }
 
 figcaption:hover {
   /* turns the caption back on */
-  opacity: .6;
+  opacity: 0.7;
 }
 
-figcaption a:hover {
-  font-size: 26px;
+figcaption p {
+  margin-top: 40%;
+  font-size: 24px;
 }
 
 .circle, .circle img, .circle figcaption {
@@ -292,6 +290,10 @@ figcaption a:hover {
 
 .description p {
   margin-bottom: 0;
+}
+
+li {
+  margin-top: 8px;
 }
 
 .desc-button {

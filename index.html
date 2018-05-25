@@ -5,16 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Katrina Hayes - Web Developer</title>
-  <style>
-  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Open+Sans|Raleway');
-  </style>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <script type="text/javascript" src="js/jquery.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/canvas.js"></script>
-  <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
  </head>
  <body>
   <div class="container">
@@ -48,7 +45,7 @@
         <div class="about-text">
           <h1 id="about-heading">About</h1>
           <div class="about-info">
-            <p class="one">I'm an (almost) freshly-minted web developer, about to emerge from the mind-bending fog of General Assembly's Web Development Immersive course.</p>
+            <p class="one">I'm a freshly-minted web developer, just emerged from the mind-bending fog of General Assembly's Web Development Immersive course.</p>
             <p>Learning languages – Spanish, French, Arabic, and most recently Japanese – has long been my thing. And learning computer languages has been just as enjoyable. I'm transitioning to developer from a background in linguistics & project management.</p>
             <p>Coding has opened my brain to new ways of thinking, and I'm excited to find myself in a world of endless learning. When I'm not coding, you'll find me planning trips, reading books, or being fascinated as my one-year-old learns a new word.</p>
           </div>
@@ -86,10 +83,30 @@
       <div class="projects">
         <div class="projects-spacer"></div>
         <h1 id="projects-heading">Projects</h1>
+        <div class="project playways">
+          <figure class="circle">
+            <a href="https://co-canvas.herokuapp.com" target="_blank">
+              <img src="images/playways.png" alt="Playways">
+              <figcaption><p>See it in action (Chrome on desktop is best for now!)</p></figcaption>
+            </a>
+          </figure>
+          <div class="description">
+            <div class="desc-text">
+              <h2>Playways</h2>
+              <p>Playways is a sound visualiser and generative art app built using the p5 and p5.sound libraries. It works by continually analysing a song's amplitude and using that data to render visualisations. Every canvas comes out a little differently.</p>
+              <p>Users can listen to preloaded music or switch to mic mode to make/listen to their own music. Note: Currently works best in Chrome on desktop due to difficulties getting around browser restrictions for autoloading and autoplaying sound.</p>
+            </div>
+            <div class="desc-button">
+              <button class="code mono"><a href="https://github.com/katshaze/playways" target="_blank">Show me the code!</a></button>
+            </div>
+          </div>
+        </div>
         <div class="project co-canvas">
           <figure class="circle">
-            <img src="images/cocanvas.png" alt="CoCanvas">
-            <figcaption><a href="https://co-canvas.herokuapp.com" target="_blank">View the site/make art</a></figcaption>
+            <a href="https://co-canvas.herokuapp.com" target="_blank">
+              <img src="images/cocanvas.png" alt="CoCanvas">
+              <figcaption><p>Make pixel art on the live site</p></figcaption>
+            </a>
           </figure>
           <div class="description">
             <div class="desc-text">
@@ -104,13 +121,16 @@
         </div>
         <div class="project bookpinch">
           <figure class="circle">
-            <img src="images/bookpinch.png" alt="BookPinch">
-            <figcaption><a href="https://bookpinch.herokuapp.com" target="_blank">View site/pinch books</a></figcaption>
+            <a href="https://bookpinch.herokuapp.com" target="_blank">
+              <img src="images/bookpinch.png" alt="BookPinch">
+              <figcaption><p>View the live site & pinch books</p></figcaption>
+            </a>
           </figure>
           <div class="description">
             <div class="desc-text">
               <h2>BookPinch</h2>
-              <p>BookPinch is a book tracking app built with Ruby on Rails. It allows users to search for books via the Goodreads API, and track books as 'to read', 'reading' and 'read'. Users can then find other users who have similar book tastes, and explore their favourites shelf for new reading ideas.</p>
+              <p>BookPinch is a book tracking app that allows users to sign up and search for books which they then track as 'to read', 'reading' and 'read'. Users can mark their favourite books then find other users who have similar book tastes, and explore those users' favourites shelf for new reading ideas.</p>
+              <p>BookPinch is built with Ruby on Rails and uses the Goodreads API for the book search function as well as the Google Books API for providing a preview link.</p>
             </div>
             <div class="desc-button">
               <button class="code mono"><a href="https://github.com/katshaze/project1" target="_blank">Show me the code!</a></button>
@@ -119,13 +139,15 @@
         </div>
         <div class="project noughts-crosses">
           <figure class="circle">
-            <img src="images/noughts&crosses.png" alt="Noughts&Crosses">
-            <figcaption><a href="https://katshaze.github.io/project0" target="_blank">Play a game</a></figcaption>
+            <a href="https://katshaze.github.io/project0" target="_blank">
+              <img src="images/noughts&crosses.png" alt="Noughts&Crosses">
+              <figcaption><p>View the live site & play a game</p></figcaption>
+            </a>
           </figure>
           <div class="description">
             <div class="desc-text">
               <h2>Noughts & Crosses</h2>
-              <p>My first major project, this website allows users to play Noughts & Crosses against another human or the (not very smart at this stage) computer. It is built using JavaScript (including jQuery), HTML and CSS.</p>
+              <p>My Project 0, this website allows users to play Noughts & Crosses against another human or the (not very smart at this stage) computer. It is built using JavaScript (including jQuery), HTML and CSS.</p>
               <p>It sounded simple, but coding this was my first proper foray into the mind-stretching world of game logic. I followed my code around and around as it played out, only to re-write and re-follow it until (finally!) it more or less acted how I was hoping. I won't soon forget that sweet feeling.</p>
             </div>
             <div class="desc-button">
