@@ -10,32 +10,12 @@ $(document).ready(function() {
   let w = canvas.width = windowWidth;
   let h = canvas.height = scrollHeight;
 
-  // let w, h;
-  // const sizeCanvas = function() {
-  //   w = canvas.width = windowWidth;
-  //   h = canvas.height = scrollHeight;
-  //   console.log('sizeCanvas function triggered. width & height are:', w, h);
-  // }
-  // sizeCanvas();
-  // $(window).resize(function() {
-  //   console.log(`window resized`);
-  //   sizeCanvas()
-  // });
-
-  // const w = canvas.width = windowWidth;
-  // const h = canvas.height = scrollHeight;
-
   const ctx = canvas.getContext('2d');
   const tileSize = 30;
   let nextUp = 'b';
 
-  // getting a random integer:
-  // function getRandomInt(min, max) {
-  //     return Math.floor(Math.random() * (max - min + 1)) + min;
-  // }
-
   function generateDiagonals(ctx, tileSize, w, h) {
-   ctx.clearRect(0, 0, w, h);
+    ctx.clearRect(0, 0, w, h);
 
     for (let y = 0; y <= (h / tileSize); y++) {
       for (let x = 0; x <= (w / tileSize); x++) {
@@ -44,7 +24,7 @@ $(document).ready(function() {
         const yOffset = y * tileSize;
 
         ctx.beginPath();
-        ctx.strokeStyle = `rgb(${Math.floor(255 - ((y + 1) * 2))}, 0, ${Math.floor(255 - ((x + 1) * 15))})`;
+        ctx.strokeStyle = `rgb(${Math.floor(255 - ((y + 1) * 2))}, 100, ${Math.floor(255 - ((x + 1) * 15))})`;
         if (leftToRight) {
           // draw  left to right line = \
           ctx.moveTo(xOffset, yOffset);
@@ -139,12 +119,10 @@ $(document).ready(function() {
     }
   }
 
-
   // generate pattern initially & on refresh
   generateOverlapDiagonals(ctx, tileSize, w, h);
 
-  // do it againnnnnn on each click, alternating
-  $('body, a').on('click', function(){
+  function drawNextUp() {
     if (nextUp === 'a') {
       generateOverlapDiagonals(ctx, tileSize, w, h);
       nextUp = 'b';
@@ -158,11 +136,13 @@ $(document).ready(function() {
       generateHorVertLines2(ctx, tileSize, w, h);
       nextUp = 'a';
     }
+  }
+  // do it againnnnnn on each click, alternating
+  $('body, a').on('click', function(){
+    drawNextUp();
   });
 
-
   $(window).resize(function() {
-    console.log(`resize fired`);
     windowWidth = window.innerWidth;
     scrollHeight = container.scrollHeight;
     w = canvas.width = windowWidth;
@@ -170,5 +150,5 @@ $(document).ready(function() {
     generateHorVertLines(ctx, tileSize, w, h);
     nextUp = 'c';
   });
-  
+
 }); // end of doc ready
