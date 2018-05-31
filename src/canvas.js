@@ -1,15 +1,15 @@
 $(document).ready(function() {
 
   // canvas
-  const windowWidth = window.innerWidth;
-  const windowHeight = window.innerHeight;
+  let windowWidth = window.innerWidth;
+  let windowHeight = window.innerHeight;
   const container = document.querySelector('.container');
-  const scrollHeight = container.scrollHeight;
+  let scrollHeight = container.scrollHeight;
 
   const canvas = document.getElementById('myCanvas');
-  const w = canvas.width = windowWidth;
-  const h = canvas.height = scrollHeight;
-  
+  let w = canvas.width = windowWidth;
+  let h = canvas.height = scrollHeight;
+
   // let w, h;
   // const sizeCanvas = function() {
   //   w = canvas.width = windowWidth;
@@ -160,5 +160,14 @@ $(document).ready(function() {
     }
   });
 
+  window.addEventListener('resize', function() {
+    console.log(`resize fired`);
+    // windowWidth = window.innerWidth;
+    // scrollHeight = container.scrollHeight;
+    // w = canvas.width = windowWidth;
+    // h = canvas.height = scrollHeight;
+    // generateHorVertLines(ctx, tileSize, w, h);
+    // nextUp = 'c';
+  });
 
 }); // end of doc ready
