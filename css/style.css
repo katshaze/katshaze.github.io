@@ -382,6 +382,12 @@ footer a {
   }
 }
 
+@media (min-width: 1020px) {
+  .description {
+    width: 450px;
+  }
+}
+
 
 @media (min-width: 1200px) {
   header {
