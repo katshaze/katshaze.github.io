@@ -160,14 +160,15 @@ $(document).ready(function() {
     }
   });
 
-  window.addEventListener('resize', function() {
-    console.log(`resize fired`);
-    // windowWidth = window.innerWidth;
-    // scrollHeight = container.scrollHeight;
-    // w = canvas.width = windowWidth;
-    // h = canvas.height = scrollHeight;
-    // generateHorVertLines(ctx, tileSize, w, h);
-    // nextUp = 'c';
-  });
 
+  $(window).resize(function() {
+    console.log(`resize fired`);
+    windowWidth = window.innerWidth;
+    scrollHeight = container.scrollHeight;
+    w = canvas.width = windowWidth;
+    h = canvas.height = scrollHeight;
+    generateHorVertLines(ctx, tileSize, w, h);
+    nextUp = 'c';
+  });
+  
 }); // end of doc ready
