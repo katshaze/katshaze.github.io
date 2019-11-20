@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d js",
-    "watch": "babel --watch src -d js"
+    "dev": "parcel index.html --open",
+    "build": "parcel build dist/index.html"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/katshaze/katshaze.github.io#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-env": "^2.4.1"
+    "parcel-bundler": "^1.12.4"
   }
 }
