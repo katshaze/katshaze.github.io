@@ -218,8 +218,6 @@ $(document).ready(function () {
   generateOverlapDiagonals(ctx, tileSize, w, h); // define function for which pattern to draw next
 
   function drawNextUp() {
-    console.log("nextUp before running maybeNext:", nextUp);
-
     if (nextUp === 1) {
       generateOverlapDiagonals(ctx, tileSize, w, h); // nextUp = 'b';
     } else if (nextUp === 2) {
@@ -284,7 +282,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51726" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55905" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
