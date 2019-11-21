@@ -55,6 +55,11 @@ p, li {
   font-size: 18px;
 }
 
+.text {
+  background-color: rgba(255,255,252,.9);
+  padding: 5px;
+}
+
 /* CANVAS STYLING */
 #myCanvas {
   position: absolute;
@@ -175,11 +180,6 @@ p.one {
 
 .about-info {
   margin-bottom: 20px;
-}
-
-.about-info p {
-  background-color: rgba(255,255,252,.9);
-  padding: 5px;
 }
 
 .skills, .learning {
