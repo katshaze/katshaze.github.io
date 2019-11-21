@@ -337,6 +337,10 @@ footer a {
   nav a {
     font-size: 25px;
   }
+
+  .spacer {
+    height: 15vh;
+  }
 }
 
 @media (min-width: 550px) {
