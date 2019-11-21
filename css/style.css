@@ -333,6 +333,12 @@ footer a {
 }
 
 /* RESPONSIVENESS */
+@media (max-width: 350px) {
+  nav a {
+    font-size: 25px;
+  }
+}
+
 @media (min-width: 550px) {
   .description {
     width: 400px;
