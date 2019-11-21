@@ -89,7 +89,6 @@ $(document).ready(function() {
 
   // define function for which pattern to draw next
   function drawNextUp() {
-    console.log(`nextUp before running maybeNext:`, nextUp);
     if (nextUp === 1) {
       generateOverlapDiagonals(ctx, tileSize, w, h);
       // nextUp = 'b';
