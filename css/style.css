@@ -75,8 +75,7 @@ p, li {
   position: fixed;
   color: inherit;
   z-index: 99;
-  /* background: #d1a1a1eb; */
-  background: rgba(162, 172, 230, 0.9);
+  background: rgba(250, 240, 244, 0.9);
 }
 
 nav {
