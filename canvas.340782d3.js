@@ -196,7 +196,7 @@ $(document).ready(function () {
         var xOffset = x * tileSize;
         var yOffset = y * tileSize;
         ctx.beginPath();
-        ctx.strokeStyle = "rgb(".concat(Math.floor(255 - (x + 1) * 5), ", ").concat(Math.floor(255 - (y + 1) * 5), ", 0)");
+        ctx.strokeStyle = "rgba(".concat(Math.floor(255 - (x + 1) * 5), ", ").concat(Math.floor(255 - (y + 1) * 5), ", 0, 0.7)");
 
         if (vertical) {
           // draw vertical line = |
@@ -282,7 +282,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62561" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64306" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
