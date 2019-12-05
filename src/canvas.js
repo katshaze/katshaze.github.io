@@ -69,7 +69,7 @@ $(document).ready(function() {
         const xOffset = x * tileSize;
         const yOffset = y * tileSize;
         ctx.beginPath();
-        ctx.strokeStyle = `rgb(${Math.floor(255 - ((x + 1) * 5))}, ${Math.floor(255 - ((y + 1) * 5))}, 0)`;
+        ctx.strokeStyle = `rgba(${Math.floor(255 - ((x + 1) * 5))}, ${Math.floor(255 - ((y + 1) * 5))}, 0, 0.7)`;
         if (vertical) {
           // draw vertical line = |
           ctx.moveTo(xOffset, yOffset);
