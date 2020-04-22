@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html --open",
-    "build": "parcel build index.html --public-url /katshaze.github.io/",
+    "build": "parcel build index.html",
     "deploy": "gh-pages deploy -d dist -b master"
   },
   "repository": {
