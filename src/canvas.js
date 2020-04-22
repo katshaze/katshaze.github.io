@@ -23,7 +23,7 @@ $(document).ready(function() {
         const xOffset = x * tileSize;
         const yOffset = y * tileSize;
         ctx.beginPath();
-        ctx.strokeStyle = `rgb(${Math.floor(255 - ((y + 1) * 2))}, 100, ${Math.floor(255 - ((x + 1) * 15))})`;
+        ctx.strokeStyle = `rgba(${Math.floor(255 - ((y + 1) * 2))}, 100, ${Math.floor(255 - ((x + 1) * 15))}, 0.5)`;
         if (leftToRight) {
           // draw  left to right line = \
           ctx.moveTo(xOffset, yOffset);
@@ -46,7 +46,7 @@ $(document).ready(function() {
         const xOffset = x * tileSize;
         const yOffset = y * tileSize;
         ctx.beginPath();
-        ctx.strokeStyle = `rgb(${Math.floor(255 - (y * 4))}, 150, ${Math.floor(255 - (x * 20))})`;
+        ctx.strokeStyle = `rgba(${Math.floor(200 - (y * 2))}, ${Math.floor(50 + (x * 5))}, 100, 0.5)`;
         if (leftToRight) {
           // draw  left to right line = \
           ctx.moveTo(xOffset, yOffset);
@@ -69,7 +69,9 @@ $(document).ready(function() {
         const xOffset = x * tileSize;
         const yOffset = y * tileSize;
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(${Math.floor(255 - ((x + 1) * 5))}, ${Math.floor(255 - ((y + 1) * 5))}, 0, 0.7)`;
+        ctx.strokeStyle = `rgba(${Math.floor(50 - ((x * 2)))}, ${Math.floor(200 - ((y + 1) * 2))}, ${Math.floor(100 + ((x * 5)))}, 0.5)`;
+        console.log(ctx.strokeStyle);
+        
         if (vertical) {
           // draw vertical line = |
           ctx.moveTo(xOffset, yOffset);
@@ -85,7 +87,7 @@ $(document).ready(function() {
   };
 
   // generate pattern initially & on refresh
-  generateOverlapDiagonals(ctx, tileSize, w, h);
+  generateDiagonals(ctx, tileSize, w, h);
 
   // define function for which pattern to draw next
   function drawNextUp() {
