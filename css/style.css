@@ -372,7 +372,6 @@ footer a {
   }
   .project {
     flex-direction: row;
-    align-items: flex-start;
   }
   .description {
     width: 300px;
