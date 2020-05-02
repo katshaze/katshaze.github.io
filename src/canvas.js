@@ -46,7 +46,7 @@ $(document).ready(function() {
         const xOffset = x * tileSize;
         const yOffset = y * tileSize;
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(${Math.floor(200 - (y * 2))}, ${Math.floor(50 + (x * 5))}, 100, 0.5)`;
+        ctx.strokeStyle = `rgba(${Math.floor(150 - (y * 2))}, ${Math.floor(150 - (x * 5))}, 150, 0.5)`;
         if (leftToRight) {
           // draw  left to right line = \
           ctx.moveTo(xOffset, yOffset);
@@ -69,7 +69,7 @@ $(document).ready(function() {
         const xOffset = x * tileSize;
         const yOffset = y * tileSize;
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(${Math.floor(50 - ((x * 2)))}, ${Math.floor(200 - ((y + 1) * 2))}, ${Math.floor(100 + ((x * 5)))}, 0.5)`;
+        ctx.strokeStyle = `rgba(${Math.floor(150 - ((y * 2)))}, ${Math.floor(200 - ((x + 1) * 5))}, ${Math.floor(10 + ((y * 2)))}, 0.5)`;
         console.log(ctx.strokeStyle);
         
         if (vertical) {
