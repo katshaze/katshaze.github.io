@@ -4,18 +4,11 @@ $(document).ready(function() {
   const windowHeight = window.innerHeight;
 
   const canvas = document.getElementById('myCanvas');
-  console.log(canvas);
   canvas.width = windowWidth;
-  // canvas.height = windowWidth / 2;
   canvas.height = windowHeight;
 
   const context = canvas.getContext('2d');
   const tileSize = 30;
-
-  // getting a random integer:
-  // function getRandomInt(min, max) {
-  //     return Math.floor(Math.random() * (max - min + 1)) + min;
-  // }
 
   function generateDiagonals(ctx, tileSize, width, height) {
    ctx.clearRect(0, 0, width, height);

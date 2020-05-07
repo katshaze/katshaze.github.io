@@ -3,10 +3,7 @@ $(document).ready(function() {
   const windowHeight = window.innerHeight;
 
   const cat = document.querySelector('img');
-  // const cat = $('#cat');
-  console.log(cat);
   cat.style.width = `${windowWidth/4}px`;
-  console.log(cat.style.width);
   cat.style.position = "absolute";
   cat.style.left = "0px";
 
