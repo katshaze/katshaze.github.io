@@ -14,13 +14,13 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="home-anchor">
         <header>
             <div class="nav-container">
                 <nav>
                     <a id="home-nav" href="#" aria-label="Go to Home">home</a>
-                    <a id="about-nav" href="#" aria-label="Go to About section">about</a>
-                    <a id="projects-nav" href="#" aria-label="Go to Projects section">projects</a>
+                    <a id="about-nav" href="#about-anchor" aria-label="Go to About section">about</a>
+                    <a id="projects-nav" href="#projects-anchor" aria-label="Go to Projects section">projects</a>
                 </nav>
             </div>
             <div class="spacer"></div>
@@ -39,12 +39,12 @@
                 </div>
             </div>
             <div class="scroll-down">
-                <a id="intro-arrows" class="fas fa-angle-double-down"></a>
+                <a id="intro-arrows" class="fas fa-angle-double-down" href="#about-anchor"></a>
             </div>
         </header>
 
         <div class="main">
-            <div class="about">
+            <div class="about" id="about-anchor">
                 <div class="about-spacer"></div>
                 <div class="about-text">
                     <h1 id="about-heading">About</h1>
@@ -98,11 +98,11 @@
                     </div>
                 </div>
                 <div class="scroll-down">
-                    <a id="about-arrows" class="fas fa-angle-double-down"></a>
+                    <a id="about-arrows" class="fas fa-angle-double-down" href="#projects-anchor"></a>
                 </div>
             </div>
 
-            <div class="projects">
+            <div class="projects" id="projects-anchor">
                 <div class="projects-spacer"></div>
                 <h1 id="projects-heading">Projects</h1>
                 <p class="text">Below are the projects I worked on when I first started coding via General Assembly's
@@ -251,9 +251,8 @@
         </footer>
         <canvas id="myCanvas"></canvas>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
     <script src="./src/canvas.js"></script>
-    <script src="./src/animations.js"></script>
 </body>
 
 </html>

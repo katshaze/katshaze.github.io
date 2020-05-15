@@ -1,42 +1,24 @@
-$(document).ready(function() {
-  // scroll to sections
-  $('#home-nav').on('click', function(e) {
+// generic scroll somewhere function
+const scrollSomewhere = function (fromId, toId) {  
+  document.getElementById(`${fromId}`).addEventListener("click", function (e) {
+    // prevent it from updating the url
     e.preventDefault();
-    $('html, body').animate({
-    scrollTop: 0}, {duration: 1000, easing: 'linear'});
+    document.getElementById(`${toId}`).scrollIntoView({ behavior: "smooth" });
   });
+};
 
-  $('#foot-nav').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-    scrollTop: 0}, {duration: 1000, easing: 'linear'});
-  });
-
-  $('#about-nav').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $(".about").offset().top
-    }, {duration: 1000, easing: 'linear'});
-  });
-
-  $('#intro-arrows').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $(".about").offset().top
-    }, {duration: 1000, easing: 'linear'});
-  });
-
-  $('#projects-nav').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $(".projects").offset().top
-    }, {duration: 1000, easing: 'linear'});
-  });
-
-  $('#about-arrows').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $(".projects").offset().top
-    }, {duration: 1000, easing: 'linear'});
-  });
-});
+// function to start event listeners for scrolling
+export function startScrollEventListeners() {
+  // navigate home
+  scrollSomewhere("home-nav", "home-anchor");
+  // scroll up home from footer
+  scrollSomewhere("foot-nav", "home-anchor");
+  // navigate to about section
+  scrollSomewhere("about-nav", "about-anchor");
+  // scroll down from end of intro to about
+  scrollSomewhere("intro-arrows", "about-anchor");
+  // navigate to projects
+  scrollSomewhere("projects-nav", "projects-anchor");
+  // scroll down from end of about to projects
+  scrollSomewhere("about-arrows", "projects-anchor");
+};
