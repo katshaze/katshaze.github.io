@@ -1,8 +1,5 @@
-let nextUp = 2;
-
-// canvas
+// set up canvas
 let windowWidth = window.innerWidth;
-let windowHeight = window.innerHeight;
 const container = document.querySelector(".container");
 let scrollHeight = container.scrollHeight;
 
@@ -13,7 +10,7 @@ let h = (canvas.height = scrollHeight);
 const ctx = canvas.getContext("2d");
 const tileSize = 30;
 
-function generateDiagonals(ctx, tileSize, w, h) {
+const generateDiagonals = function (ctx, tileSize, w, h) {
   ctx.clearRect(0, 0, w, h);
   for (let y = 0; y <= h / tileSize; y++) {
     for (let x = 0; x <= w / tileSize; x++) {
@@ -36,9 +33,9 @@ function generateDiagonals(ctx, tileSize, w, h) {
       ctx.stroke();
     }
   }
-}
+};
 
-function generateOverlapDiagonals(ctx, tileSize, w, h) {
+const generateOverlapDiagonals = function (ctx, tileSize, w, h) {
   ctx.clearRect(0, 0, w, h);
   for (let y = 0; y <= h / tileSize; y++) {
     for (let x = 0; x <= w / tileSize; x++) {
@@ -61,9 +58,9 @@ function generateOverlapDiagonals(ctx, tileSize, w, h) {
       ctx.stroke();
     }
   }
-}
+};
 
-function generateHorVertLines(ctx, tileSize, w, h) {
+const generateHorVertLines = function (ctx, tileSize, w, h) {
   ctx.clearRect(0, 0, w, h);
   for (let y = 0; y <= h / tileSize; y++) {
     for (let x = 0; x <= w / tileSize; x++) {
@@ -87,13 +84,16 @@ function generateHorVertLines(ctx, tileSize, w, h) {
       ctx.stroke();
     }
   }
-}
+};
 
-// generate pattern initially & on refresh
-generateDiagonals(ctx, tileSize, w, h);
+const randomInteger = function (min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
-// define function for which pattern to draw next
-function drawNextUp() {
+// Determine which pattern to draw next
+let nextUp = 2;
+
+const drawNextUp = function () {
   if (nextUp === 1) {
     generateOverlapDiagonals(ctx, tileSize, w, h);
     // nextUp = 'b';
@@ -104,32 +104,32 @@ function drawNextUp() {
     generateDiagonals(ctx, tileSize, w, h);
   }
 
-  let maybeNext = random(1, 3);
+  let maybeNext = randomInteger(1, 3);
   while (maybeNext === nextUp) {
-    maybeNext = random(1, 3);
+    maybeNext = randomInteger(1, 3);
   }
   nextUp = maybeNext;
-}
-
-// do it againnnnnn on each click, alternating
-const clickableElements = document.querySelectorAll("body, a");
-for (let i=0; i < clickableElements.length; i++) {
-  addEventListener("click", function () {    
-    drawNextUp();
-  });
-}
-
-
-window.onresize = function () {
-  windowWidth = window.innerWidth;
-  scrollHeight = container.scrollHeight;
-  w = canvas.width = windowWidth;
-  h = canvas.height = scrollHeight;
-  generateHorVertLines(ctx, tileSize, w, h);
-  nextUp = 3;
 };
 
-const random = function (min, max) {
-  // getting a random integer:
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+export function generateBackground() {
+  // generate pattern initially & on refresh
+  generateDiagonals(ctx, tileSize, w, h);
+
+  // generate new pattern at random on click
+  const clickableElements = document.querySelectorAll("body, a");
+  for (let i = 0; i < clickableElements.length; i++) {    
+    addEventListener("click", function () {
+      drawNextUp();
+    });
+  }
+
+  // regenerate one of the patterns if window is resized
+  window.onresize = function () {
+    windowWidth = window.innerWidth;
+    scrollHeight = container.scrollHeight;
+    w = canvas.width = windowWidth;
+    h = canvas.height = scrollHeight;
+    generateHorVertLines(ctx, tileSize, w, h);
+    nextUp = 3;
+  };
+}
