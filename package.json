@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html --open",
-    "build": "parcel build index.html && cp CNAME ./dist",
-    "deploy": "gh-pages deploy -d dist -b master"
+    "build": "parcel build index.html --out-dir docs",
+    "serve": "npm run build && npx http-server docs"
   },
   "repository": {
     "type": "git",

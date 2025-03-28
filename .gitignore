@@ -1,4 +1,19 @@
-node_modules/
+# Parcel files
 .cache/
 dist/
+
+# Node.js dependencies (using npm so don't push up yarn.lock)
+node_modules/
+yarn.lock
+
+# OS-specific files
 .DS_Store
+Thumbs.db
+
+# Editor/IDE files
+.vscode/
+.idea/
+
+# Miscellaneous
+*.log
+*.tmp
