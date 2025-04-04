@@ -16,6 +16,8 @@ This will output files to a /dist folder just for local development purposes.
 npm run build
 ```
 
+This will build the files for deployment and add them to the /docs folder.
+
 ### Test out how prod built files are looking
 
 ```

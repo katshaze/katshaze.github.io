@@ -2,10 +2,9 @@
   "name": "katshaze.github.io",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html --open",
-    "build": "parcel build index.html --out-dir docs",
+    "dev": "parcel serve index.html",
+    "build": "find docs -type f ! -name 'CNAME' -delete && parcel build index.html --dist-dir docs",
     "serve": "npm run build && npx http-server docs"
   },
   "repository": {
@@ -20,11 +19,10 @@
   },
   "homepage": "https://github.com/katshaze/katshaze.github.io#readme",
   "devDependencies": {
-    "gh-pages": "^2.1.1",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-clean-dist": "0.0.6"
+    "parcel": "^2.14.4"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "normalize.css": "^8.0.1"
   }
 }

@@ -1,5 +1,5 @@
 # Parcel files
-.cache/
+.parcel-cache/
 dist/
 
 # Node.js dependencies (using npm so don't push up yarn.lock)
