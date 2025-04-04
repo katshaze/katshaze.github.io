@@ -121,7 +121,8 @@ export function generateBackground() {
   // generate new pattern at random on click
   const clickableElements = document.querySelectorAll("body, a");
   for (let i = 0; i < clickableElements.length; i++) {
-    addEventListener("click", function () {
+    addEventListener("pointerdown", (event) => {
+      event.preventDefault(); // Prevent scrolling or zooming
       drawNextUp();
     });
   }
