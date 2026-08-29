@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/katshaze/katshaze.github.io#readme",
   "devDependencies": {
-    "parcel": "^2.14.4"
+    "parcel": "^2.16.4"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
